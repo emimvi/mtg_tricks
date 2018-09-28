@@ -119,12 +119,15 @@
             //Generates all card images.
             function populate() {
                 let div = document.getElementById("cards");
+                let prev;
                 cards.forEach( (card) => {
                     var img = document.createElement("img");
                     img.src = to_image(card.multiverseid);
                     img.card = card;
                     img.width = 170;
+                    if (prev && card.multiverseid == prev.multiverseid) img.style.display = "none";
                     div.appendChild(img);
+                    prev = card;
                 });
             }
 
