@@ -107,7 +107,7 @@
                 let prev_id; //To remove split duplicates. Assumes cards are sorted.
                 for (let img of imgs) {
                     let id = img.card.multiverseid;
-                    if (id != prev_id && castable(img.card, colors) || colors.length == 0) {
+                    if (id != prev_id && (castable(img.card, colors) || colors.length == 0)) {
                         img.style.display =  "";
                     } else {
                         img.style.display =  "none";
