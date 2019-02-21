@@ -5,135 +5,10 @@
 
         <title>Guilds of Ravnica instants</title>
         <link rel="stylesheet" href="index.css">
-        <script type="text/javascript" charset="utf-8">
-            let cards = [
-                {    "manaCost": "{3}{W}",    "multiverseid": 452755,    "colors": [      "White"    ],    "cmc": 4  },
-                {    "manaCost": "{3}{W}",    "multiverseid": 452757,    "colors": [      "White"    ],    "cmc": 4  },
-                {    "manaCost": "{W}",    "multiverseid": 452773,    "colors": [      "White"    ],    "cmc": 1  },
-                {    "manaCost": "{W}",    "multiverseid": 452778,    "colors": [      "White"    ],    "cmc": 1  },
-                {    "manaCost": "{3}{U}",    "multiverseid": 452781,    "colors": [      "Blue"    ],    "cmc": 4  },
-                {    "manaCost": "{3}{U}",    "multiverseid": 452782,    "colors": [      "Blue"    ],    "cmc": 4  },
-                {    "manaCost": "{U}",    "multiverseid": 452784,    "colors": [      "Blue"    ],    "cmc": 1  },
-                {    "manaCost": "{2}{U}{U}",    "multiverseid": 452785,    "colors": [      "Blue"    ],    "cmc": 4  },
-                {    "manaCost": "{1}{U}",    "multiverseid": 452787,    "colors": [      "Blue"    ],    "cmc": 2  },
-                {    "manaCost": "{4}{U}{U}",    "multiverseid": 452788,    "colors": [      "Blue"    ],    "cmc": 6  },
-                {    "manaCost": "{U}{U}",    "multiverseid": 452794,    "colors": [      "Blue"    ],    "cmc": 2  },
-                {    "manaCost": "{1}{U}",    "multiverseid": 452802,    "colors": [      "Blue"    ],    "cmc": 2  },
-                {    "manaCost": "{1}{U}{U}",    "multiverseid": 452804,    "colors": [      "Blue"    ],    "cmc": 3  },
-                {    "manaCost": "{1}{U}",    "multiverseid": 452806,    "colors": [      "Blue"    ],    "cmc": 2  },
-                {    "manaCost": "{1}{B}",    "multiverseid": 452825,    "colors": [      "Black"    ],    "cmc": 2  },
-                {    "manaCost": "{B}",    "multiverseid": 452829,    "colors": [      "Black"    ],    "cmc": 1  },
-                {    "manaCost": "{3}{B}",    "multiverseid": 452833,    "colors": [      "Black"    ],    "cmc": 4  },
-                {    "manaCost": "{4}{R}",    "multiverseid": 452844,    "colors": [      "Red"    ],    "cmc": 5  },
-                {    "manaCost": "{4}{R}{R}",    "multiverseid": 452857,    "colors": [      "Red"    ],    "cmc": 6  },
-                {    "manaCost": "{2}{R}",    "multiverseid": 452863,    "colors": [      "Red"    ],    "cmc": 3  },
-                {    "manaCost": "{1}{R}",    "multiverseid": 452868,    "colors": [      "Red"    ],    "cmc": 2  },
-                {    "manaCost": "{4}{G}{G}",    "multiverseid": 452874,    "colors": [      "Green"    ],    "cmc": 6  },
-                {    "manaCost": "{2}{G}",    "multiverseid": 452876,    "colors": [      "Green"    ],    "cmc": 3  },
-                {    "manaCost": "{G}",    "multiverseid": 452887,    "colors": [      "Green"    ],    "cmc": 1  },
-                {    "manaCost": "{2}{G}",    "multiverseid": 452889,    "colors": [      "Green"    ],    "cmc": 3  },
-                {    "manaCost": "{2}{G}",    "multiverseid": 452890,    "colors": [      "Green"    ],    "cmc": 3  },
-                {    "manaCost": "{2}{U}{B}",    "multiverseid": 452901,    "colors": [      "Blue",      "Black"    ],    "cmc": 4  },
-                {    "manaCost": "{B}{G}",    "multiverseid": 452902,    "colors": [      "Black",      "Green"    ],    "cmc": 2  },
-                {    "manaCost": "{1}{R}{W}",    "multiverseid": 452909,    "colors": [      "White",      "Red"    ],    "cmc": 3  },
-                {    "manaCost": "{3}{U}{R}",    "multiverseid": 452928,    "colors": [      "Blue",      "Red"    ],    "cmc": 5  },
-                {    "manaCost": "{1}{U}{R}",    "multiverseid": 452929,    "colors": [      "Blue",      "Red"    ],    "cmc": 3  },
-                {    "manaCost": "{3}{G}{W}",    "multiverseid": 452931,    "colors": [      "White",      "Green"    ],    "cmc": 5  },
-                {    "manaCost": "{R}{W}",    "multiverseid": 452932,    "colors": [      "White",      "Red"    ],    "cmc": 2  },
-                {    "manaCost": "{X}{G}{W}{W}",    "multiverseid": 452938,    "colors": [      "White",      "Green"    ],    "cmc": 3  },
-                {    "manaCost": "{1}{U}{R}",    "multiverseid": 452949,    "colors": [      "Blue",      "Red"    ],    "cmc": 3  },
-                {    "manaCost": "{1}{U/B}{U/B}",    "multiverseid": 452970,    "colors": [      "Blue",      "Black"    ],    "cmc": 3  },
-                {    "manaCost": "{G/W}{G/W}",    "multiverseid": 452971,    "colors": [      "White",      "Green"    ],    "cmc": 2  },
-                {    "manaCost": "{4}{G}{W}",    "multiverseid": 452971,    "colors": [      "White",      "Green"    ],    "cmc": 6  },
-                {    "manaCost": "{3}{U}{B}",    "multiverseid": 452973,    "colors": [      "Blue",      "Black"    ],    "cmc": 5  },
-                {    "manaCost": "{U/R}{U/R}",    "multiverseid": 452974,    "colors": [      "Blue",      "Red"    ],    "cmc": 2  },
-                {    "manaCost": "{X}{U}{U}{R}{R}",    "multiverseid": 452974,    "colors": [      "Blue",      "Red"    ],    "cmc": 4  },
-                {    "manaCost": "{R/W}",    "multiverseid": 452977,    "colors": [      "White",      "Red"    ],    "cmc": 1  },
-                {    "manaCost": "{2}{R}{W}",    "multiverseid": 452977,    "colors": [      "White",      "Red"    ],    "cmc": 4  },
-                {    "manaCost": "{U/R}",    "multiverseid": 452978,    "colors": [      "Blue",      "Red"    ],    "cmc": 1  },
-                {    "manaCost": "{4}{U}{R}",    "multiverseid": 452978,    "colors": [      "Blue",      "Red"    ],    "cmc": 6  },
-                {    "manaCost": "{R/W}{R/W}",    "multiverseid": 452979,    "colors": [      "White",      "Red"    ],    "cmc": 2  },
-                {    "manaCost": "{B/G}",    "multiverseid": 452980,    "colors": [      "Black",      "Green"    ],    "cmc": 1  },
-                {    "manaCost": "{2}{B}{G}",    "multiverseid": 452980,    "colors": [      "Black",      "Green"    ],    "cmc": 4  },
-            ]
-
-            //Convert multiverseid to gatherer url.
-            let to_image = (id) => "./img/"+id+".png";
-
-            //Filter-state.
-            let filter_colors = {
-                count : 0,
-                White : false,
-                Blue : false,
-                Black : false,
-                Red : false,
-                Green : false,
-                toggle : function(color) {
-                    this[color] = !this[color];
-                    return this[color];
-                },
-                colors : function() {
-                    let arr = [];
-                    if (this.White) arr.push("White");
-                    if (this.Blue) arr.push("Blue");
-                    if (this.Black) arr.push("Black");
-                    if (this.Red) arr.push("Red");
-                    if (this.Green) arr.push("Green");
-                    return arr;
-                }
-            };
-
-            //Check if a card is castable with the colors in the colors-array.
-            function castable(card, colors) {
-                var result = card.colors.filter(function(item){ return colors.indexOf(item) > -1});   
-                var containsAll = (result.length == card.colors.length);  
-                var containsAny = (result.length > 0);  
-
-                if (card.colors.length == 1) {
-                    return containsAny;
-                } else {
-                   return card.manaCost.includes("/") ? containsAny : containsAll; 
-                }
-
-            }
-
-            //Toggles the visibility of cards with the color of the button that was clicked.
-            function filter(ele) {
-                let toggled = filter_colors.toggle(ele.id);
-                ele.className = (toggled) ? "toggled" : "";
-                let colors = filter_colors.colors();
-                let imgs = document.getElementsByTagName('img');
-
-                let prev_id; //To remove split duplicates. Assumes cards are sorted.
-                for (let img of imgs) {
-                    let id = img.card.multiverseid;
-                    if (id != prev_id && (castable(img.card, colors) || colors.length == 0)) {
-                        img.style.display =  "";
-                    } else {
-                        img.style.display =  "none";
-                    }
-                    prev_id = id;
-                };
-            }
-
-            //Generates all card images.
-            function populate() {
-                let div = document.getElementById("cards");
-                let prev;
-                cards.forEach( (card) => {
-                    var img = document.createElement("img");
-                    img.src = to_image(card.multiverseid);
-                    img.card = card;
-                    img.width = 170;
-                    if (prev && card.multiverseid == prev.multiverseid) img.style.display = "none";
-                    div.appendChild(img);
-                    prev = card;
-                });
-            }
-
-        </script>
+        <script type="text/javascript" language="javascript" src="cards.js"></script> 
+        <script src="index.js"></script>
     </head>
-    <body onload="populate()">
+    <body onload="initialize()">
         <p class="filter" id="filter">
             Filter:
             <button id="White" onclick="filter(this)" > <object width=40 height=40 data="svg/W.svg" type="image/svg+xml" > </object > </button >
@@ -142,7 +17,7 @@
             <button id="Red" onclick="filter(this)"   > <object width=40 height=40 data="svg/R.svg" type="image/svg+xml" > </object > </button >
             <button id="Green" onclick="filter(this)" > <object width=40 height=40 data="svg/G.svg" type="image/svg+xml" > </object > </button >
         </p>
-        <div id="cards" onload="populate()">
+        <div id="cards">
         </div>
     </body>
 </html>
