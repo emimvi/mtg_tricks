@@ -33,15 +33,18 @@ function castable(card, colors) {
 }
 
 //Toggles the visibility of cards with the color of the button that was clicked.
-function filter(button) {
-    let toggled = filter_colors.toggle(button.id);
+function filter(button, color) {
+    let toggled = filter_colors.toggle(color);
     button.className = (toggled) ? "toggled" : "";
     let colors = filter_colors.colors();
     let imgs = document.getElementsByTagName('img');
 
-    let prev_id; //To remove split duplicates. Assumes cards are sorted.
+    //Variable used to remove split duplicates. Assumes cards are sorted.
+    let prev_id; 
+
     for (let img of imgs) {
         let id = img.card.multiverseid;
+
         if (id != prev_id && (castable(img.card, colors) || colors.length == 0)) {
             img.style.display =  "";
         } else {

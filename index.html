@@ -5,19 +5,18 @@
 
         <title>Guilds of Ravnica instants</title>
         <link rel="stylesheet" href="index.css">
-        <script type="text/javascript" language="javascript" src="cards.js"></script> 
+        <script src="cards.js"></script> 
         <script src="index.js"></script>
     </head>
     <body onload="initialize()">
         <p class="filter" id="filter">
             Filter:
-            <button id="White" onclick="filter(this)" > <object width=40 height=40 data="svg/W.svg" type="image/svg+xml" > </object > </button >
-            <button id="Blue" onclick="filter(this)"  > <object width=40 height=40 data="svg/U.svg" type="image/svg+xml" > </object > </button >
-            <button id="Black" onclick="filter(this)" > <object width=40 height=40 data="svg/B.svg" type="image/svg+xml" > </object > </button >
-            <button id="Red" onclick="filter(this)"   > <object width=40 height=40 data="svg/R.svg" type="image/svg+xml" > </object > </button >
-            <button id="Green" onclick="filter(this)" > <object width=40 height=40 data="svg/G.svg" type="image/svg+xml" > </object > </button >
+            <button id="White" onclick="filter(this,  this.id)" ><object class="button_img" data="svg/W.svg" type="image/svg+xml" > </object > </button >
+            <button id="Blue" onclick="filter(this, this.id)"  > <object class="button_img" data="svg/U.svg" type="image/svg+xml" > </object > </button >
+            <button id="Black" onclick="filter(this, this.id)" > <object class="button_img" data="svg/B.svg" type="image/svg+xml" > </object > </button >
+            <button id="Red" onclick="filter(this, this.id)"   > <object class="button_img" data="svg/R.svg" type="image/svg+xml" > </object > </button >
+            <button id="Green" onclick="filter(this, this.id)" > <object class="button_img" data="svg/G.svg" type="image/svg+xml" > </object > </button >
         </p>
-        <div id="cards">
-        </div>
+        <div id="cards"/>
     </body>
 </html>

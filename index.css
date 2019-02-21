@@ -1,4 +1,4 @@
-object {
+.button_img {
     height: 40px;
     width: 40px;
     pointer-events: none;
@@ -10,7 +10,7 @@ button {
     width: 40px;
     margin: 0;
     padding: 0;
-    background-color: white;
+    background-color: transparent;
     opacity: 0.3;
 }
 
