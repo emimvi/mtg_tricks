@@ -13,11 +13,11 @@ let filter_colors = {
     },
     colors : function() {
         let arr = [];
-        if (this.White) arr.push("White");
-        if (this.Blue) arr.push("Blue");
-        if (this.Black) arr.push("Black");
-        if (this.Red) arr.push("Red");
-        if (this.Green) arr.push("Green");
+        if (this.White) arr.push("W");
+        if (this.Blue) arr.push("U");
+        if (this.Black) arr.push("B");
+        if (this.Red) arr.push("R");
+        if (this.Green) arr.push("G");
         return arr;
     }
 };
@@ -43,7 +43,7 @@ function filter(button, color) {
     let prev_id; 
 
     for (let img of imgs) {
-        let id = img.card.multiverseid;
+        let id = img.card.scryfallId;
 
         if (id != prev_id && (castable(img.card, colors) || colors.length == 0)) {
             img.style.display =  "";
@@ -59,15 +59,21 @@ function initialize() {
     let div = document.getElementById("cards");
 
     //Converts multiverseid to image url.
-    let to_image = (id) => "./img/"+id+".png";
+    let to_image = (id) => "./m21/"+id+".jpg";
 
     let prev;
-    cards.forEach( (card) => {
+    window.cards.sort( (c1, c2) => {
+        if (c1.convertedManaCost > c2.convertedManaCost)
+            return 1;
+        if (c1.convertedManaCost < c2.convertedManaCost)
+            return -1;
+        return 0;
+    });
+    window.cards.forEach( (card) => {
         var img = document.createElement("img");
-        img.src = to_image(card.multiverseid);
+        img.src = to_image(card.scryfallId);
         img.card = card;
         img.width = 170;
-        if (prev && card.multiverseid == prev.multiverseid) img.style.display = "none";
         div.appendChild(img);
         prev = card;
     });
